@@ -1,0 +1,22 @@
+@charset="UTF-8";
+
+*{
+box-sizing: border-box; padding: 0;}
+
+body,html{
+height: 100%;
+font-family: arial, sans-serife;}
+
+tr{
+margin: 10px;}
+
+input{
+text-align: right;
+width: 100%;}
+
+table{
+width: 300px;}
+
+button{
+width: 300px;}
+
