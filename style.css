@@ -4,8 +4,9 @@
 box-sizing: border-box; padding: 0;}
 
 body,html{
-height: 100%;
-font-family: arial, sans-serife;}
+  text-align: center;
+  height: 100%;
+  font-family: arial, sans-serife;}
 
 tr{
 margin: 10px;}
