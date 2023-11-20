@@ -25,5 +25,7 @@ width: 300px;}
 
 #fim{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
