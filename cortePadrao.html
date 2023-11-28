@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--link rel="stylesheet" href="style.css"-->
+
+	<title>Projetos</title>
+</head>
+<style>
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		text-align: center;
+		display: flex;
+	}
+
+	section {
+		margin: auto;
+		width: 100%;
+		background-color: rgb(125, 189, 153);
+		max-width: 600px;
+		padding: 10px;
+	}
+
+	input {
+		width: 90%;
+		max-width: 120px;
+	}
+
+	table {
+		width: 100%;
+
+	}
+
+	select {
+		margin: 5px;
+		color: grey;
+	}
+
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	h2 {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #fff;
+		font-size: large;
+		text-transform: uppercase;
+	}
+
+	td img {
+		width: 80px;
+
+	}
+
+	.ProdutosFabrica p {
+		font-size: 10px;
+		color: rgb(2, 54, 2);
+	}
+	.ProdutosFabrica input{
+		text-align: center;
+		
+	}
+	
+</style>
+
+<body>
+	<section>
+
+		<form action="">
+			<h2>Dados do PcP</h2>
+			<table>
+				<tr>
+					<td>
+						<select name="produtos">
+							<option value="">selecione uma liga</option>
+							<option value="">LIGA A</option>
+							<option value="">LIGA AT</option>
+							<option value="">LIGA P</option>
+						</select>
+					</td>
+					<td>
+						<input type="number" placeholder="unit" id="peso0">
+					</td>
+					<td>
+						<input type="number" placeholder="peso" id="unit0">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select name="produtos" id="produto1">
+							<option value="">selecione uma liga</option>
+							<option value="">LIGA A</option>
+							<option value="">LIGA AT</option>
+							<option value="">LIGA P</option>
+
+						</select>
+					</td>
+					<td>
+						<input type="number" placeholder="unit" id="peso1">
+					</td>
+					<td>
+						<input type="number" placeholder="peso" id="unit1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select name="produtos" id="produto2">
+							<option value="">selecione uma liga</option>
+							<option value="">LIGA A</option>
+							<option value="">LIGA AT</option>
+							<option value="">LIGA P</option>
+
+						</select>
+					</td>
+					<td>
+						<input type="number" placeholder="unit" id="peso2">
+					</td>
+					<td>
+						<input type="number" placeholder="peso" id="unit2">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<p id="res">Resultado</p>
+					</td>
+					<td>
+						<!--img src="imagem/botao.png" alt="" onclick="calc_pcp()"-->
+					</td>
+				</tr>
+			</table>
+		</form>
+		<table class="ProdutosFabrica">
+			<tr>
+				<th colspan="3"> Produtos em linha </th>
+			</tr>
+			<!--tr>
+				<td colspan="2">
+					<input type="radio" name="RK402" id="folger">RK402
+				</td>
+				
+				<td><input type="button" value="RK402" onclick="folger()"></td>
+			</tr>
+			<tr id="tqfolger">
+				
+			</tr-->
+			<tr>
+				<td>Torrado </td>
+				<td>Rendimento Tor. </td>
+				<td></td>
+			</tr>
+			<tr>
+				<td> <input type="text" id="valor_torrado" value="14000"></td>
+				<td> <input type="text" value="49" id="renTor"></td>
+				<td id="result_torrado"><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Diluido</td>
+				<td>Rendimento Dil</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="valor_diluido" value="75000"></td>
+				<td> <input type="text" value="10" id="brix_diluido"></td>
+				<td id="result_diluido"><input type="text"></td>
+			</tr>
+
+			<tr>
+				<td>Concentrado</td>
+				<td>Rend. Conc </td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="valor_concentrado" value="40000"></td>
+				<td> <input type="text" value="50" id="brix_concentrado"></td>
+				<td id="result_concentrado"><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Torre 1 NºEmb</td>
+				<td>Peso Emb </td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="valor_Emb0" value="300"></td>
+				<td> <input type="text" value="30" id="pesoEmb0"></td>
+				<td id="result_torre1"><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Torre 2 NºEmb</td>
+				<td>Peso Emb </td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="valor_Emb1" value="300"></td>
+				<td> <input type="text" value="30" id="pesoEmb1"></td>
+				<td  id="result_torre2"><input type="text"></td>
+			</tr>
+			<tr>
+				
+				<td colspan="3">
+					<p id="res_prod" style="font-size: 18px;">0</p>
+					<p id="Falta" style="font-size: 18px;">0</p>
+				</td>
+			</tr>
+
+
+		</table>
+		<img src="imagem/botao.png" alt="" onclick="calc_pcp()" style="width: 70px;">
+	</section>
+
+</body>
+<script src="perfil.js"></script>
+<script>
+	var tempo = new Date();
+	var hora = tempo.getHours();
+
+	var radFolger = document.getElementById('folger');
+
+	
+
+	function calc_pcp() {
+		var prod0 = document.getElementById('peso0').value;
+		var unit0 = document.getElementById('unit0').value;
+		var prod1 = document.getElementById('peso1').value;
+		var unit1 = document.getElementById('unit1').value;
+		var prod2 = document.getElementById('peso2').value;
+		var unit2 = document.getElementById('unit2').value;
+
+		var torre1 = document.getElementById('valor_Emb0').value * document.getElementById('pesoEmb0').value;
+		var torre2 = document.getElementById('valor_Emb1').value * document.getElementById('pesoEmb1').value;
+
+		var torrado = document.getElementById('valor_torrado').value * (document.getElementById('renTor').value / 100);
+		var diluido = document.getElementById('valor_diluido').value * (document.getElementById('brix_diluido').value / 100);
+		var concentrado = document.getElementById('valor_concentrado').value * (document.getElementById('brix_concentrado').value / 100);
+		
+		var Falta = document.getElementById('Falta');
+		
+		
+		Rtorrado = document.getElementById('result_torrado');
+		Rdiluido = document.getElementById('result_diluido');
+		Rconcentrado = document.getElementById('result_concentrado');
+		result_torre1 = document.getElementById('result_torre1');
+		result_torre2 = document.getElementById('result_torre2');
+
+
+		var res = document.getElementsByTagName('p')[0];
+		var res_prod = document.getElementById('res_prod');
+
+		Rtorrado.innerHTML =  torrado;
+		Rdiluido.innerHTML =  diluido;
+		Rconcentrado.innerHTML =  concentrado;
+
+		result_torre1.innerHTML = torre1
+		result_torre2.innerHTML = torre2
+		
+		a = (Number.parseFloat((prod0 * unit0).toFixed(2)) + Number.parseFloat((prod1 * unit1).toFixed(2)) + Number.parseFloat((prod2 * unit2).toFixed(2)));
+		b = (Number.parseFloat(torre1) + Number.parseFloat(torre2) + Number.parseFloat(torrado) + Number.parseFloat(diluido) + Number.parseFloat(concentrado));
+
+		res.innerHTML = (Number.parseFloat((prod0 * unit0).toFixed(2)) + Number.parseFloat((prod1 * unit1).toFixed(2)) + Number.parseFloat((prod2 * unit2).toFixed(2)));
+		res_prod.innerHTML = Number.parseFloat(torre1) + Number.parseFloat(torre2) + Number.parseFloat(torrado) + Number.parseFloat(diluido) + Number.parseFloat(concentrado);
+		Falta.innerHTML = `Falta a torrar ${(((a - b) / 0.49)/450).toFixed(2) }`;
+		
+		//alert(Rtorrado)
+
+	}
+</script>
+
+</html>
