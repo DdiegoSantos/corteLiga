@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Produção Diária</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        text-align: center;
+        background-color: rgb(125, 174, 189);
+        height: 100%;
+    }
+
+    section {
+        margin: auto;
+        width: 100%;
+        box-shadow: 0 0 23px rgba(0, 0, 0, 0.534);
+        max-width: 600px;
+        padding: 10px;
+        height: 100%;
+        
+    }
+
+    input {
+        width: 90%;
+        max-width: 120px;
+    }
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+
+    }
+
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: large;
+        text-transform: uppercase;
+    }
+
+    td img {
+        width: 180px;
+
+    }
+
+    .ProdutosFabrica p {
+        font-size: 10px;
+        color: rgb(2, 54, 2);
+    }
+
+    .ProdutosFabrica input {
+        text-align: center;
+
+    }
+</style>
+
+<body>
+    <section>
+        <table class="ProdutosFabrica">
+            <tr>
+                <th colspan="3"> Produção Diária </th>
+            </tr>
+        </table>
+        <hr>
+        <table class="ProdutosFabrica">
+
+            <tr>
+                <td colspan="3">Torre 1 </td>
+                <td> </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> tempo parada</td>
+                <td> Nº Emb</td>
+                <td>Peso</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="horaParadaTor1">
+
+                        <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                    <select name="" id="minParadaTor1">
+
+                        <option value="0">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                </td>
+                <td> <input type="number" value="" placeholder="NºEmb" id="txt1_num0"></td><!--num e peso torre 2-->
+                <td><input type="number" placeholder="peso" id="txt1_peso0" class="txt_peso"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="hora" id="horaTor1">
+
+                        <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                    <select name="min" id="minTor1">
+                        <option value="0">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                </td>
+                <td> <input type="number" value="" placeholder="NºEmb" id="txt1_num1"></td><!--num e peso torre 2-->
+                <td><input type="number" placeholder="peso" id="txt1_peso1" class="txt_peso"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="tempo parada" id="txt_stop1"></td>
+                <td> <input type="number" value="" placeholder="NºEmb" id="txt1_num2"></td><!--num e peso torre 2-->
+                <td><input type="number" placeholder="peso" id="txt1_peso2" class="txt_peso"></td>
+            </tr>
+
+        </table>
+        <hr>
+        <table class="ProdutosFabrica">
+
+            <tr>
+                <td colspan="3">Torre 2 </td>
+                <td> </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> tempo parada</td>
+                <td> Nº Emb</td>
+                <td>Peso</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="horaParadaTor2">
+
+                        <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                    <select name="" id="minParadaTor2">
+
+                        <option value="0">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                </td>
+                <td> <input type="number" value="" placeholder="NºEmb" id="txt2_num0"></td><!--num e peso torre 2-->
+                <td><input type="number" placeholder="peso" id="txt2_peso0" class="txt_peso"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="hora" id="horaTor2">
+
+                        <option value="0">00</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                    <select name="min" id="minTor2">
+                        <option value="0">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+                </td>
+                <td> <input type="number" value="" placeholder="NºEmb" id="txt2_num1"></td><!--num e peso torre 2-->
+                <td><input type="number" placeholder="peso" id="txt2_peso1" class="txt_peso"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" placeholder="tempo parada" id="txt_stop2"></td>
+                <td> <input type="number" value="" placeholder="NºEmb" id="txt2_num2"></td><!--num e peso torre 2-->
+                <td><input type="number" placeholder="peso" id="txt2_peso2" class="txt_peso"></td>
+            </tr>
+
+        </table>
+        <hr>
+        <table class="ProdutosFabrica">
+            <tr>
+
+                <td>
+                    torre 1
+
+                </td>
+                <td>
+                    previsão
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="text" id="txt_kilos1" placeholder="kilos/hora">
+
+                </td>
+                <td>
+                    <input type="text" id="txt_Tot">
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    torre 2
+
+                </td>
+                <td>
+                    descontando
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="text" id="txt_kilos2" placeholder="kilos/hora">
+
+                </td>
+                <td>
+                    <input type="text" id="txt_descTot">
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <div id="botoes">
+            <div>
+
+                <img src="imagem/botao.png" alt="" onclick="producao()" style="width: 120px;">
+            </div>
+            <div>
+
+                <a href="index.html"><img src="imagem/botaoVoltar.png" alt="" style="width: 80px;"></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="perfil.js"></script>
+
+<script>
+    class Torre{
+        constructor(horaParada, minutoParado){
+            this.hora = horaParada;
+            this.min = minutoParado
+
+        }
+
+
+    }
+    
+    var agora = new Date();
+    dia = agora.getDate();
+    mes = agora.getMonth() + 1;
+    hora = agora.getHours();
+    min = agora.getMinutes();
+
+
+    function produto(a, b) {
+        return Number(document.querySelector("#txt" + a + "_num" + b).value) * Number(document.querySelector("#txt" + a + "_peso" + b).value)
+
+    }
+
+    function horaParadaTorre(item){
+        return document.getElementById('horaParadaTor' + item).value; 
+    }
+    
+    function minutoParado(item){
+        return document.getElementById('minParadaTor' + item).value;
+        
+    }
+    function horaInicioTorre(item){
+        return document.getElementById('horaTor' + item).value; 
+    }
+    
+    function minutoInicio(item){
+        return document.getElementById('minTor' + item).value;
+        
+    }
+
+
+    function producao() {
+        horaParadaTor2 = horaParadaTorre(2);
+        minParadaTor2 = minutoParado(2);
+        horaTor2 = horaInicioTorre(2);
+        minTor2 = minutoInicio(2);
+        
+        horaParadaTor1 = horaParadaTorre(1);
+        minParadaTor1 = minutoParado(1);
+        horaTor1 = horaInicioTorre(1);
+        minTor1 = minutoInicio(1);
+        
+            
+
+        horaTempo2 = Number.parseFloat(horaTor2) - Number.parseFloat(horaParadaTor2);
+        minTempo2 = Number.parseFloat(minTor2) - Number.parseFloat(minParadaTor2);
+
+        horaTempo1 = Number.parseFloat(horaTor1) - Number.parseFloat(horaParadaTor1);
+        minTempo1 = Number.parseFloat(minTor1) - Number.parseFloat(minParadaTor1);
+
+
+        if (minTempo2 < 0) {
+            horaTempo2 -= 1;
+            minTempo2 += 60;
+
+        }
+        if (horaTempo2 <= 0) {
+            horaTempo2 += 24;
+
+        }
+        if (horaTempo2 >= 23.99) {
+            horaTempo2 = 0;
+        }
+        
+        if (minTempo1 < 0) {
+            horaTempo1 -= 1;
+            minTempo1 += 60;
+
+        }
+        if (horaTempo1 <= 0) {
+            horaTempo1 += 24;
+
+        }
+        if (horaTempo1 >= 23.99) {
+            horaTempo1 = 0;
+        }
+
+     
+        tempoParada2 = horaTempo2 + ((1 - (60 - minTempo2) / 60));
+
+        document.getElementById('txt_stop2').value = `${(tempoParada2).toFixed(2)}%`;
+
+       
+        tempoParada1 = horaTempo1 + ((1 - (60 - minTempo1) / 60));
+
+        document.getElementById('txt_stop1').value = `${(tempoParada1).toFixed(2)}%`;
+
+
+        peso_Tor2 = document.getElementById('txt2_peso0').value * document.getElementById('txt2_num0').value;
+       peso_Tor1 = document.getElementById('txt1_peso0').value * document.getElementById('txt1_num0').value;
+        
+
+        if (hora < 6) {
+            hora += 18;
+        }
+        horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
+        document.getElementById('txt_kilos2').value = `${(peso_Tor2 / horatrabalhada2).toFixed(2)} kilos/h`;
+
+        horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
+        document.getElementById('txt_kilos1').value = `${(peso_Tor1 / horatrabalhada1).toFixed(2)} kilos/h`;
+
+
+
+        totPro = (24 - horaTempo2) * (peso_Tor2 / horatrabalhada2) + (24 - horaTempo1) * (peso_Tor1 / horatrabalhada1);
+        
+        totDes = totPro - (totPro * 0.05);
+
+        document.getElementById('txt_descTot').value = `${(totDes).toFixed(2)} kilos`;
+        document.getElementById('txt_Tot').value = `${(totPro).toFixed(2)} kilos`;
+
+
+
+        produto1 = produto(2, 0)
+        produto2 = produto(2, 1)
+        produto3 = produto(2, 2)
+        produto4 = produto(1, 0)
+        produto5 = produto(1, 1)
+        produto6 = produto(1, 2)
+        
+
+
+
+    }
+</script>
+
+</html>

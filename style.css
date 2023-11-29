@@ -28,4 +28,11 @@ width: 300px;}
   
   
 }
-
+#botoes {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+#botoes div{
+  width: 100%;
+}

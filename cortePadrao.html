@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--link rel="stylesheet" href="style.css"-->
+	<link rel="stylesheet" href="style.css">
 
 	<title>Projetos</title>
 </head>
@@ -15,17 +15,19 @@
 		padding: 0;
 	}
 
-	body {
+	body,html{
 		text-align: center;
-		display: flex;
+		background-color: rgb(125, 189, 153);
+		height: 100%;
 	}
 
 	section {
 		margin: auto;
 		width: 100%;
-		background-color: rgb(125, 189, 153);
+		box-shadow: 0 0 23px rgba(0, 0, 0, 0.534);
 		max-width: 600px;
 		padding: 10px;
+		height: 100%;
 	}
 
 	input {
@@ -55,7 +57,7 @@
 	}
 
 	td img {
-		width: 80px;
+		width: 180px;
 
 	}
 
@@ -67,6 +69,7 @@
 		text-align: center;
 		
 	}
+	
 	
 </style>
 
@@ -131,7 +134,7 @@
 						<p id="res">Resultado</p>
 					</td>
 					<td>
-						<!--img src="imagem/botao.png" alt="" onclick="calc_pcp()"-->
+						
 					</td>
 				</tr>
 			</table>
@@ -140,25 +143,16 @@
 			<tr>
 				<th colspan="3"> Produtos em linha </th>
 			</tr>
-			<!--tr>
-				<td colspan="2">
-					<input type="radio" name="RK402" id="folger">RK402
-				</td>
-				
-				<td><input type="button" value="RK402" onclick="folger()"></td>
-			</tr>
-			<tr id="tqfolger">
-				
-			</tr-->
+			
 			<tr>
 				<td>Torrado </td>
 				<td>Rendimento Tor. </td>
 				<td></td>
 			</tr>
 			<tr>
-				<td> <input type="number" id="valor_torrado" value=""></td>
-				<td> <input type="number" value="49" id="renTor"></td>
-				<td id="result_torrado"><input type="text"></td>
+				<td> <input type="text" id="valor_torrado" value=""></td>
+				<td> <input type="text" value="48" id="renTor"></td>
+				<td ><input type="text" id="result_torrado"></td>
 			</tr>
 			<tr>
 				<td>Diluido</td>
@@ -166,9 +160,9 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input type="number" id="valor_diluido" value=""></td>
-				<td> <input type="number" value="10" id="brix_diluido"></td>
-				<td id="result_diluido"><input type="text"></td>
+				<td><input type="text" id="valor_diluido" value=""></td>
+				<td> <input type="text" value="10" id="brix_diluido"></td>
+				<td ><input type="text" id="result_diluido"></td>
 			</tr>
 
 			<tr>
@@ -177,9 +171,9 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input type="number" id="valor_concentrado" value=""></td>
-				<td> <input type="number" value="50" id="brix_concentrado"></td>
-				<td id="result_concentrado"><input type="text"></td>
+				<td><input type="text" id="valor_concentrado" value=""></td>
+				<td> <input type="text" value="50" id="brix_concentrado"></td>
+				<td ><input type="text" id="result_concentrado"></td>
 			</tr>
 			<tr>
 				<td>Torre 1 NºEmb</td>
@@ -187,9 +181,9 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input type="number" id="valor_Emb0" value=""></td>
-				<td> <input type="number" value="" id="pesoEmb0"></td>
-				<td id="result_torre1"><input type="text"></td>
+				<td><input type="text" id="valor_Emb0" value=""></td>
+				<td> <input type="text" value="" id="pesoEmb0"></td>
+				<td ><input type="text" id="result_torre1"></td>
 			</tr>
 			<tr>
 				<td>Torre 2 NºEmb</td>
@@ -197,9 +191,9 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input type="number" id="valor_Emb1" value=""></td>
-				<td> <input type="number" value="" id="pesoEmb1"></td>
-				<td  id="result_torre2"><input type="text"></td>
+				<td><input type="text" id="valor_Emb1" value=""></td>
+				<td> <input type="text" value="" id="pesoEmb1"></td>
+				<td  ><input type="text" id="result_torre2"></td>
 			</tr>
 			<tr>
 				
@@ -211,64 +205,23 @@
 
 
 		</table>
-		<img src="imagem/botao.png" alt="" onclick="calc_pcp()" style="width: 70px;">
+		<div id="botoes">
+			<div>
+
+				<img src="imagem/botao.png" alt="" onclick="calc_pcp()" style="width: 120px;">
+			</div>
+			<div>
+
+				<a href="index.html"><img src="imagem/botaoVoltar.png" alt=""  style="width: 80px;"></a>
+			</div>
+		</div>
+
 	</section>
 
 </body>
 <script src="perfil.js"></script>
 <script>
-	var tempo = new Date();
-	var hora = tempo.getHours();
-
-	var radFolger = document.getElementById('folger');
-
 	
-
-	function calc_pcp() {
-		var prod0 = document.getElementById('peso0').value;
-		var unit0 = document.getElementById('unit0').value;
-		var prod1 = document.getElementById('peso1').value;
-		var unit1 = document.getElementById('unit1').value;
-		var prod2 = document.getElementById('peso2').value;
-		var unit2 = document.getElementById('unit2').value;
-
-		var torre1 = document.getElementById('valor_Emb0').value * document.getElementById('pesoEmb0').value;
-		var torre2 = document.getElementById('valor_Emb1').value * document.getElementById('pesoEmb1').value;
-
-		var torrado = document.getElementById('valor_torrado').value * (document.getElementById('renTor').value / 100);
-		var diluido = document.getElementById('valor_diluido').value * (document.getElementById('brix_diluido').value / 100);
-		var concentrado = document.getElementById('valor_concentrado').value * (document.getElementById('brix_concentrado').value / 100);
-		
-		var Falta = document.getElementById('Falta');
-		
-		
-		Rtorrado = document.getElementById('result_torrado');
-		Rdiluido = document.getElementById('result_diluido');
-		Rconcentrado = document.getElementById('result_concentrado');
-		result_torre1 = document.getElementById('result_torre1');
-		result_torre2 = document.getElementById('result_torre2');
-
-
-		var res = document.getElementsByTagName('p')[0];
-		var res_prod = document.getElementById('res_prod');
-
-		Rtorrado.innerHTML =  torrado;
-		Rdiluido.innerHTML =  diluido;
-		Rconcentrado.innerHTML =  concentrado;
-
-		result_torre1.innerHTML = torre1
-		result_torre2.innerHTML = torre2
-		
-		a = (Number.parseFloat((prod0 * unit0).toFixed(2)) + Number.parseFloat((prod1 * unit1).toFixed(2)) + Number.parseFloat((prod2 * unit2).toFixed(2)));
-		b = (Number.parseFloat(torre1) + Number.parseFloat(torre2) + Number.parseFloat(torrado) + Number.parseFloat(diluido) + Number.parseFloat(concentrado));
-
-		res.innerHTML = (Number.parseFloat((prod0 * unit0).toFixed(2)) + Number.parseFloat((prod1 * unit1).toFixed(2)) + Number.parseFloat((prod2 * unit2).toFixed(2)));
-		res_prod.innerHTML = Number.parseFloat(torre1) + Number.parseFloat(torre2) + Number.parseFloat(torrado) + Number.parseFloat(diluido) + Number.parseFloat(concentrado);
-		Falta.innerHTML = `Falta a torrar ${(((a - b) / 0.49)/450).toFixed(2) }`;
-		
-		//alert(Rtorrado)
-
-	}
 </script>
 
 </html>

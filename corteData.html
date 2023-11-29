@@ -7,15 +7,37 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
-    
+
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+        background-color: rgb(189, 144, 113);
+    }
+
+    section {
+        max-width: 600px;
+        padding: 10px;
+        width: 60%;
+        margin: auto;
+        height: 100%;
+        padding: 20px 0;
+        box-shadow: 0 0 23px rgba(0, 0, 0, 0.534);
+    }
+</style>
 
 <body>
 
     <section id="fim">
         <p>Corte de Liga por Tempo das Torres</p><br>
-<select name="dia" id="diaOut">
-	    <option value="0">Dia do Mês</option>
+        <select name="dia" id="diaOut">
+            <option value="0">Dia do Mês</option>
             <option value="1">01</option>
             <option value="2">02</option>
             <option value="3">03</option>
@@ -49,26 +71,11 @@
             <option value="31">31</option>
 
         </select>
-<!--
-        <select name="mes" id="mesOut">
-            <option value="1">01</option>
-            <option value="2">02</option>
-            <option value="3">03</option>
-            <option value="4">04</option>
-            <option value="5">05</option>
-            <option value="6">06</option>
-            <option value="7">07</option>
-            <option value="8">08</option>
-            <option value="9">09</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
--->
-	<select name="hora" id="horaOut">
-	    <option value="horadia">Hora do dia</option>
+
+        <select name="hora" id="horaOut">
+            <option value="horadia">Hora do dia</option>
             <option value="0">00</option>
-	    <option value="1">01</option>
+            <option value="1">01</option>
             <option value="2">02</option>
             <option value="3">03</option>
             <option value="4">04</option>
@@ -92,10 +99,9 @@
             <option value="22">22</option>
             <option value="23">23</option>
         </select>
-        
-    </section>
-    <section id="pcp" class="box_center">
-        
+
+
+
         <table>
             <tr>
                 <th>Produtos em linha</th>
@@ -105,52 +111,60 @@
                 <td>
                     <p>Insira os valores de cada produto em linha</p>
                 </td>
-                
+
             </tr>
-	<tr>
+            <tr>
                 <td>Relação Extrações <input type="number" value="7" step="0.5" id="relExt"></td>
-                
+
             </tr>
-	<tr>
-		<td>Rend. Concentrador <input type="number" value="0.195" id="rendConcentrador"></td>
-	</tr>
+            <tr>
+                <td>Rend. Concentrador <input type="number" value="0.195" id="rendConcentrador"></td>
+            </tr>
 
-	<tr>
-		<td>Vazão Torre1 <input type="number" value="1570" id="vazaoTor1"></td>
-	</tr>
+            <tr>
+                <td>Vazão Torre1 <input type="number" value="1570" id="vazaoTor1"></td>
+            </tr>
 
-	<tr>
-		<td>Vazão Torre2 <input type="number" value="1160" id="vazaoTor2"></td>
-	</tr>
+            <tr>
+                <td>Vazão Torre2 <input type="number" value="1160" id="vazaoTor2"></td>
+            </tr>
 
-        <tr>
+            <tr>
                 <td>Torrado <input type="number" id="valor_torrado" value="0"></td>
-	</tr>
+            </tr>
 
             <tr>
                 <td>Diluido<input type="number" id="valor_diluido" value="0"></td>
-                
+
             </tr>
 
             <tr>
                 <td>Concentrado<input type="number" id="valor_concentrado" value="0"></td>
-                
-               
+
+
             </tr>
 
 
         </table>
 
+        <div>
+
+
+        </div>
+        <div id="botoes">
+            <p id="result"></p>
+            <img src="imagem/botao.png" alt="" onclick="calc()" style="width: 120px;">
+        </div>
+        <div>
+            <a href="index.html"><img src="imagem/botaoVoltar.png" alt="" style="width: 80px;"></a>
+
+        </div>
+
     </section>
 
-    <div>
-
-        <p id="result"></p>
-        <button onclick="calc()"> calcular</button>
-    </div>
 </body>
-<script src="corteTempo.js">
-    
+<script src="perfil.js">
+
 </script>
 
 

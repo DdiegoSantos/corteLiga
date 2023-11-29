@@ -4,19 +4,149 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<title>Teste Diego</title>
 </head>
+<style>
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body,
+	html {
+		text-align: center;
+		background-color: rgb(104, 105, 105);
+		height: 100%;
+	}
+
+	section {
+		margin: auto;
+		width: 100%;
+		box-shadow: 0 0 23px rgba(0, 0, 0, 0.534);
+		max-width: 600px;
+		padding: 0px;
+		height: 100%;
+		display: flex;
+		background-color: rgb(174, 179, 179);
+	}
+
+	input {
+		width: 90%;
+		max-width: 120px;
+	}
+
+	table {
+		width: 100%;
+
+	}
+
+	select {
+		margin: 5px;
+		color: grey;
+	}
+
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	h2 {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #fff;
+		font-size: large;
+		text-transform: uppercase;
+	}
+
+	td img {
+		width: 180px;
+
+	}
+
+	.ProdutosFabrica p {
+		font-size: 10px;
+		color: rgb(2, 54, 2);
+	}
+
+	.ProdutosFabrica input {
+		text-align: center;
+
+	}
+
+	div#um {
+		width: 100%;
+		margin: auto;
+		height: 100%;
+		padding-top: 80px;
+		background-color: rgb(189, 144, 113);
+		background-image: url('imagem/R2.png');
+		background-position-x: -120px;
+		background-repeat: no-repeat;
+		
+		
+	}
+	div#dois {
+		width: 100%;
+		margin: auto;
+		height: 100%;
+		padding-top: 80px;
+		background-color: rgb(125, 189, 153);
+		background-image: url('imagem/xicara.png');
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-size: 80%;
+	}
+	div#tres {
+		width: 100%;
+		margin: auto;
+		height: 100%;
+		padding-top: 80px;
+		background-color: rgb(125, 174, 189);
+		background-image: url('imagem/R.png');
+		background-position-x: 100px;
+		background-repeat: no-repeat;
+	}
+	h3{
+		font-size: 25px;
+		font-family: Arial, Helvetica, sans-serif;
+		text-transform: uppercase;
+	}
+	div{
+		background-color: #fff;
+		padding: 10px 0;
+		margin: 8px;
+	}
+	a{
+		text-decoration: none;
+	}
+</style>
 
 <body>
-	<table>
-		<tr>
-			<td><a href="corteData.html"><input type="button" value="corte Por Data"></a></td>
-			<td><a href="cortePadrao.html"><input type="button" value="corte Por PCP"></a></td>
-		</tr>
-	</table>
+	<section>
+		<div id="um">
+			<div>
+				<a href="corteData.html"><h3>Corte de Liga Por DATA</h3></a>
 
-	
+			</div>
+		</div>
+		<div id="dois">
+			<div>
+				<a href="cortePadrao.html"><h3>Corte de Liga Por PCP</h3></a>
+				
+			</div>
+		</div>
+		<div id="tres">
+			<div>
+				<a href="producao.html"><h3>PRODUÇÃO DIÁRIA</h3></a>
+
+			</div>
+			
+
+		</div>
+
+	</section>
+
+
 </body>
 <script src="perfil.js"></script>
 
