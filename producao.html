@@ -453,18 +453,14 @@
 
         if (hora < 6) {
             hora += 18;
-             var horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
-        document.getElementById('txt_kilos2').value = `${(peso_Tor2 / horatrabalhada2).toFixed(2)} kilos/h`;
-
-        var horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
-        document.getElementById('txt_kilos1').value = `${(peso_Tor1 / horatrabalhada1).toFixed(2)} kilos/h`;
-        } else {
+            }
+        hora -= 6;
         var horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
         document.getElementById('txt_kilos2').value = `${(peso_Tor2 / horatrabalhada2).toFixed(2)} kilos/h`;
 
         var horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
         document.getElementById('txt_kilos1').value = `${(peso_Tor1 / horatrabalhada1).toFixed(2)} kilos/h`;
-        }
+        
 
 
 
