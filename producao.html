@@ -449,38 +449,36 @@
 
         //peso_Tor2 = document.getElementById('txt2_peso0').value * document.getElementById('txt2_num0').value;
        //peso_Tor1 = document.getElementById('txt1_peso0').value * document.getElementById('txt1_num0').value;
-        
-
-        if (hora < 6) {
-            hora += 18;
-            var horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
-        document.getElementById('txt_kilos2').value = `${(peso_Tor2 / horatrabalhada2).toFixed(2)} kilos/h`;
-
-        var horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
-        document.getElementById('txt_kilos1').value = `${(peso_Tor1 / horatrabalhada1).toFixed(2)} kilos/h`;
-
-            } else {
-            
-        hora -= 6;
-        var horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
-        document.getElementById('txt_kilos2').value = `${(peso_Tor2 / horatrabalhada2).toFixed(2)} kilos/h`;
-
-        var horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
-        document.getElementById('txt_kilos1').value = `${(peso_Tor1 / horatrabalhada1).toFixed(2)} kilos/h`;
-
-        }
-        
-
-            
-
         produto1 = produto(2, 0)
         produto2 = produto(2, 1)
         produto3 = produto(2, 2)
         produto4 = produto(1, 0)
         produto5 = produto(1, 1)
         produto6 = produto(1, 2)
+
+        if (hora < 6) {
+            hora += 18;
+            var horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
+        document.getElementById('txt_kilos2').value = `${(produto4/ horatrabalhada2).toFixed(2)} kilos/h`;
+
+        var horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
+        document.getElementById('txt_kilos1').value = `${(produto1/ horatrabalhada1).toFixed(2)} kilos/h`;
+
+            } else {
+            
+        hora -= 6;
+        var horatrabalhada2 = (hora - horaTempo2) + (1 - ((60 - min) / 60));
+        document.getElementById('txt_kilos2').value = `${(produto4 / horatrabalhada2).toFixed(2)} kilos/h`;
+
+        var horatrabalhada1 = (hora - horaTempo1) + (1 - ((60 - min) / 60));
+        document.getElementById('txt_kilos1').value = `${(produto1 / horatrabalhada1).toFixed(2)} kilos/h`;
+
+        }
         
-        totPro = (24 - horaTempo2) * (produto2 / horatrabalhada2) + (24 - horaTempo1) * (produto1 / horatrabalhada1);
+
+            
+        
+        totPro = (24 - horaTempo2) * (produto4 / horatrabalhada2) + (24 - horaTempo1) * (produto1 / horatrabalhada1);
         totDes = totPro - (totPro * 0.05);
 
         document.getElementById('txt_descTot').value = `${(totDes).toFixed(2)} kilos`;
