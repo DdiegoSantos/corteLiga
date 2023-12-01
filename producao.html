@@ -415,11 +415,11 @@
             minTempo2 += 60;
 
         }
-        if (horaTempo2 <= 0) {
+        if (horaTempo2 < 0) {
             horaTempo2 += 24;
 
         }
-        if (horaTempo2 >= 23.99) {
+        if (horaTempo2 > 23.99) {
             horaTempo2 = 0;
         }
         
@@ -428,11 +428,11 @@
             minTempo1 += 60;
 
         }
-        if (horaTempo1 <= 0) {
+        if (horaTempo1 < 0) {
             horaTempo1 += 24;
 
         }
-        if (horaTempo1 >= 23.99) {
+        if (horaTempo1 > 23.99) {
             horaTempo1 = 0;
         }
 
@@ -447,8 +447,8 @@
         document.getElementById('txt_stop1').value = `${(tempoParada1).toFixed(2)}%`;
 
 
-        peso_Tor2 = document.getElementById('txt2_peso0').value * document.getElementById('txt2_num0').value;
-       peso_Tor1 = document.getElementById('txt1_peso0').value * document.getElementById('txt1_num0').value;
+        //peso_Tor2 = document.getElementById('txt2_peso0').value * document.getElementById('txt2_num0').value;
+       //peso_Tor1 = document.getElementById('txt1_peso0').value * document.getElementById('txt1_num0').value;
         
 
         if (hora < 6) {
@@ -471,14 +471,7 @@
         }
         
 
-        totPro = (24 - horaTempo2) * (peso_Tor2 / horatrabalhada2) + (24 - horaTempo1) * (peso_Tor1 / horatrabalhada1);
-        
-        totDes = totPro - (totPro * 0.05);
-
-        document.getElementById('txt_descTot').value = `${(totDes).toFixed(2)} kilos`;
-        document.getElementById('txt_Tot').value = `${(totPro).toFixed(2)} kilos`;
-
-
+            
 
         produto1 = produto(2, 0)
         produto2 = produto(2, 1)
@@ -487,6 +480,12 @@
         produto5 = produto(1, 1)
         produto6 = produto(1, 2)
         
+        totPro = (24 - horaTempo2) * (produto2 / horatrabalhada2) + (24 - horaTempo1) * (produto1 / horatrabalhada1);
+        totDes = totPro - (totPro * 0.05);
+
+        document.getElementById('txt_descTot').value = `${(totDes).toFixed(2)} kilos`;
+        document.getElementById('txt_Tot').value = `${(totPro).toFixed(2)} kilos`;
+
 
 
 
